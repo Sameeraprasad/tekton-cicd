@@ -1,0 +1,30 @@
+
+
+CREATE COMPUTE MODULE Http_Ace_flow_mf_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		CALL CopyEntireMessage();
+		RETURN TRUE;
+	END;
+
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		
+		SET Environment.employee[] = SELECT * FROM Database.EMPLOYEE;
+		SET OutputRoot.JSON.Data.Employee[] = Environment.employee[];
+		
+--		CREATE FIELD OutputRoot.JSON.Data.persons IDENTITY(JSON.Array)persons;
+--		DECLARE outref REFERENCE TO OutputRoot.JSON.Data;
+--
+--		SET outref.persons.Item[1].Name = 'venkatesh';
+--		SET outref.persons.Item[1].Id = '1266';
+--
+--		SET outref.persons.Item[2].Name = 'ramesh';
+--		SET outref.persons.Item[2].Id = '1528';
+--		
+--		DECLARE mychar CHARACTER CAST(ASBITSTREAM(OutputRoot.JSON.Data) AS CHARACTER CCSID 1208 ENCODING 546);
+----		SET Environment.result = mychar;
+--		LOG EVENT VALUES(ApplicationLabel,MessageFlowLabel,'response:'|| mychar);
+ 
+	END;
+END MODULE;

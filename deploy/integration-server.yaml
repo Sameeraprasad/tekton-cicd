@@ -1,0 +1,17 @@
+apiVersion: appconnect.ibm.com/v1beta1
+kind: IntegrationServer
+metadata:
+  name: http-ace-flow
+  namespace: cp4i-162
+spec:
+  license:
+    accept: true
+    license: L-XRNH-47FJAW
+    use: AppConnectEnterpriseNonProduction
+  version: '12.0'
+  replicas: 1
+  barURL: "http://192.168.1.35:8081/repository/tekton-hosted-repo/Http_Ace_flow.bar"
+  configurations:
+    - ace-odbcini
+    - ace-setdbparms
+    - nexus-barauth
