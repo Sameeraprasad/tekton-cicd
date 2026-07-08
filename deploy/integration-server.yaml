@@ -8,10 +8,12 @@ spec:
     accept: true
     license: L-XRNH-47FJAW
     use: CloudPakForIntegrationNonProduction
+
   version: '12.0'
   replicas: 1
 
-  barURL: "http://192.168.1.35:8081/repository/tekton-hosted-repo/Http_Ace_flow.bar"
+  barURL:
+    - "http://192.168.1.35:8081/repository/tekton-hosted-repo/Http_Ace_flow.bar"
 
   env:
     - name: ODBCINI
