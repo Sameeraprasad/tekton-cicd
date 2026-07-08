@@ -6,10 +6,10 @@ metadata:
 spec:
   license:
     accept: true
-    license: L-CGSU-AUCFFB
+    license: L-RJGW-BUAA2R
     use: AppConnectEnterpriseNonProductionFREE
 
-  version: '13.0'
+  version: '13.0.8.0-r1'
   replicas: 1
 
   barURL: 
