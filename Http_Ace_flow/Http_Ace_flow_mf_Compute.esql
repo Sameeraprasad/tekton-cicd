@@ -4,7 +4,6 @@ CREATE COMPUTE MODULE Http_Ace_flow_mf_Compute
 		CALL CopyEntireMessage();
 		RETURN TRUE;
 	END;
-
 	CREATE PROCEDURE CopyEntireMessage() BEGIN
 		
 		SET Environment.employee[] = SELECT * FROM Database.EMPLOYEE;
