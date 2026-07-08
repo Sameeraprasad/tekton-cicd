@@ -6,10 +6,10 @@ metadata:
 spec:
   license:
     accept: true
-    license: L-XRNH-47FJAW
-    use: CloudPakForIntegrationNonProduction
+    license: L-CGSU-AUCFFB
+    use: AppConnectEnterpriseNonProductionFREE
 
-  version: '13.0.0.0-r1'
+  version: '13.0'
   replicas: 1
 
   barURL: 
