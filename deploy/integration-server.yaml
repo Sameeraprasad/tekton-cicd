@@ -1,5 +1,5 @@
 apiVersion: appconnect.ibm.com/v1beta1
-kind: IntegrationServer
+kind: IntegrationRuntime
 metadata:
   name: http-ace-flow
   namespace: cp4i-162
@@ -12,7 +12,9 @@ spec:
   version: '12.0'
   replicas: 1
 
-  barURL: "http://192.168.1.35:8081/repository/tekton-hosted-repo/Http_Ace_flow.bar"
+  barURL:
+    - "http://192.168.1.35:8081/repository/tekton-hosted-repo/Http_Ace_flow.bar"
+
   env:
     - name: ODBCINI
       value: /home/aceuser/ace-server/odbc.ini
@@ -20,6 +22,7 @@ spec:
       value: /opt/ibm/ace-12/server/ODBC/dsdriver/odbc_cli/clidriver/lib
     - name: IE02_PATH
       value: /opt/ibm/ace-12/ieo2
+
   configurations:
     - ace-odbcini
     - ace-setdbparms
