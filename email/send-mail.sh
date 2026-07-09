@@ -4,7 +4,6 @@ set -e
 TEMPLATE_FILE="email/mail-template.html"
 BODY_FILE="/tmp/mail-body.html"
 MAIL_FILE="/tmp/mail.txt"
-
 echo "Preparing email body..."
 
 sed \
