@@ -64,7 +64,6 @@ Content-Type: text/html; charset=UTF-8
 
 $(cat "${BODY_FILE}")
 EOF
-
 echo "Sending email..."
 
 curl \
