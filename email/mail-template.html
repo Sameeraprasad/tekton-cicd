@@ -1,22 +1,56 @@
 <html>
-  <body>
-    <p>Hi Team,</p>
+  <body style="font-family: Arial, sans-serif; background-color: #f5f5f5; padding: 25px;">
 
-    <p>The BAR file has been built successfully and uploaded to Nexus.</p>
+    <div style="max-width: 650px; margin: auto; background-color: white;
+                padding: 25px; border-radius: 8px;">
 
-    <p><b>Application:</b> Http_Ace_flow</p>
-    <p><b>BAR File:</b> Http_Ace_flow.bar</p>
-    <p><b>Nexus URL:</b> {{BAR_URL}}</p>
+      <p>Hi Team,</p>
 
-    <p>Please click below to deploy the BAR in App Connect:</p>
+      <p>
+        The BAR file has been built successfully and uploaded to Nexus.
+      </p>
 
-    <p>
-      <a href="{{DEPLOY_URL}}"
-         style="background-color:#007bff;color:white;padding:10px 20px;text-decoration:none;border-radius:5px;display:inline-block;">
-        Deploy
-      </a>
-    </p>
+      <p>
+        <b>Application:</b> Http_Ace_flow
+      </p>
 
-    <p>Regards,<br/>Tekton CI/CD Pipeline</p>
+      <p>
+        <b>BAR File:</b> {{BAR_NAME}}
+      </p>
+
+      <p>
+        <b>Nexus URL:</b><br>
+        {{BAR_URL}}
+      </p>
+
+      <p>
+        Please click the button below to deploy this exact BAR version
+        in App Connect:
+      </p>
+
+      <p style="margin-top: 25px;">
+        <a href="{{DEPLOY_URL}}"
+           style="background-color: #007bff;
+                  color: white;
+                  padding: 12px 22px;
+                  text-decoration: none;
+                  border-radius: 5px;
+                  display: inline-block;
+                  font-weight: bold;">
+          Deploy {{BAR_NAME}}
+        </a>
+      </p>
+
+      <p style="font-size: 12px; color: #777; margin-top: 30px;">
+        This deployment link is associated with this specific BAR version.
+      </p>
+
+      <p>
+        Regards,<br>
+        Tekton CI/CD Pipeline
+      </p>
+
+    </div>
+
   </body>
 </html>
